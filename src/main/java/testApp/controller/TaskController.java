@@ -60,13 +60,16 @@ public class TaskController {
     }
 
     @RequestMapping(value = "/task/edit", method = RequestMethod.POST)
-    public void editTask(@ModelAttribute("task") Task task) {
+    public void editTask(@ModelAttribute("task") Task task, HttpServletResponse response) throws IOException {
         if (taskService.getById(task.getId()).getName().equals(task.getName())) {
             taskService.edit(task);
         }
+
+        Task taskObj = taskService.getById(task.getId());
+        Util.printJson(taskObj, response);
     }
 
-    @RequestMapping(value = "/task/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/task/{id}", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
     public void task(@PathVariable("id") int id, HttpServletResponse response) throws IOException {
         Task task = taskService.getById(id);
 
