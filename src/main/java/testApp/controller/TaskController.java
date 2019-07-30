@@ -61,9 +61,7 @@ public class TaskController {
 
     @RequestMapping(value = "/task/edit", method = RequestMethod.POST)
     public void editTask(@ModelAttribute("task") Task task, HttpServletResponse response) throws IOException {
-        if (taskService.getById(task.getId()).getName().equals(task.getName())) {
-            taskService.edit(task);
-        }
+        taskService.edit(task);
 
         Task taskObj = taskService.getById(task.getId());
         Util.printJson(taskObj, response);

@@ -7,6 +7,7 @@ Ext.define('MyExtGenApp.Application', {
   stores: [
     'MyExtGenApp.store.UserStore',
     'MyExtGenApp.store.StatusesStore',
+    // 'MyExtGenApp.store.TaskStore',
   ],
 
 

@@ -60,7 +60,7 @@ CREATE TABLE `tasks` (
   `update_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
-INSERT INTO `tasks` VALUES (15,1,'Added from web',1,2,2,NULL,NULL,NULL);
+INSERT INTO `tasks` VALUES (15,1,'Added from web',1,2,2,NULL,NULL,NULL),(16,2,'Wooo',1,2,3,NULL,NULL,NULL),(17,3,'Move furniture',1,3,1,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,7 +98,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ttt',NULL,NULL,NULL,NULL,NULL),(2,'ttt',NULL,NULL,NULL,NULL,NULL),(3,'ttt',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'Bender','Radriges','bender@mail.ru',NULL,NULL,NULL),(2,'Max','Power','max@mail.ru',NULL,NULL,NULL),(3,'Pit','Bezfamilny','pit@mail.ru',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -111,4 +111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-30 14:36:25
+-- Dump completed on 2019-07-30 16:55:44
